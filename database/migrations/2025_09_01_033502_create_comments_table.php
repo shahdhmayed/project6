@@ -11,23 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id('postid');
+       Schema::create('comments', function (Blueprint $table) {
+            $table->id('commentid');
             $table->timestamps();
             $table->string('content');
-            $table->string('title');
             $table->unsignedBigInteger('userid');
-            $table->unsignedBigInteger('commentid');
+            $table->unsignedBigInteger('postid');
             $table->foreign('userid')->references('userid')->on('users')->onDelete('cascade');
-            $table->foreign('commentid')->references('commentid')->on('comments')->onDelete('cascade');
-        });
-    }
+            $table->foreign('postid')->references('postid')->on('posts')->onDelete('cascade');
+    });
+}
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('comments');
     }
 };

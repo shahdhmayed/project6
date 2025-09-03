@@ -9,11 +9,11 @@
     <!-- Page Title -->
     <div class="page-title">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Single Post</h1>
+        <h1 class="mb-2 mb-lg-0">{{$post->title}}</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Single Post</li>
+            <li><a href="{{route('post.index')}}">Home</a></li>
+            <li class="current">{{$post->title}}</li>
           </ol>
         </nav>
       </div>
@@ -208,7 +208,8 @@
           <section id="comment-form" class="comment-form section">
             <div class="container">
 
-              <form action="">
+              <form action="{{route('posts.comment', $post->postid)}}" method='POST'>
+                @csrf
 
                 <h4>Post Comment</h4>
                 <p>Your email address will not be published. Required fields are marked * </p>
@@ -227,7 +228,7 @@
                 </div>
                 <div class="row">
                   <div class="col form-group">
-                    <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    <textarea name="comment" class="form-control" placeholder="Your Comment*" required></textarea>
                   </div>
                 </div>
 

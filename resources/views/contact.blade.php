@@ -1,4 +1,5 @@
 @include('layout.head')
+
 <body class="contact-page">
 
 @include('layout.header')
@@ -58,7 +59,8 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="{{route('contact.store')}}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              @csrf
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -81,6 +83,9 @@
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
+                  @if(session('sucess'))
+                  <div class='alert alert-success'>{{session('success')}}</div>
+                  @endif
 
                   <button type="submit">Send Message</button>
                 </div>

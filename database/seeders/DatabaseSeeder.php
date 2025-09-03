@@ -33,13 +33,12 @@ class DatabaseSeeder extends Seeder
         );
 
         
-         $this->call(
-            CommentSeeder::class,
+        $this->call(
+            PostsTableSeeder::class,
         );
 
-
         $this->call(
-            PostSeeder::class,
+            CommentsTableSeeder::class,
         );
 
         // User::factory()->create([

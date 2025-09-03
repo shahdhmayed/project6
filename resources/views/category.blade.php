@@ -1,3 +1,4 @@
+
 @include('layout.head')
 
   
@@ -308,32 +309,38 @@
             <div class="recent-posts-widget widget-item">
 
               <h3 class="widget-title">Recent Posts</h3>
-
-              <div class="post-item">
-                <img src="assets/img/blog/blog-recent-1.jpg" alt="" class="flex-shrink-0">
-                <div>
-                  <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
+              
+                        
+              
+                <div class="post-item">
+                  <img src="assets\img\blog\blog-recent-1.jpg" alt="" class='w-full h-auto'>
+                  <div class="post-content">
+                    <h4><a href="blog-details.html">Nihil blanditiis at in initial autem</a></h4>
+                    <time datetime="2020-01-01">Jan 1,  2020</time>
+            </div>
+        </div>
+        
+  
+</div>
               </div><!-- End recent post item-->
 
-              <div class="post-item">
+              {{-- <div class="post-item">
                 <img src="assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
                 <div>
                   <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
-              </div><!-- End recent post item-->
+              </div><!-- End recent post item--> --}}
 
-              <div class="post-item">
+              {{-- <div class="post-item">
                 <img src="assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
                 <div>
                   <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
-              </div><!-- End recent post item-->
+              </div><!-- End recent post item--> --}}
 
-              <div class="post-item">
+              {{-- <div class="post-item">
                 <img src="assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
                 <div>
                   <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
@@ -347,7 +354,8 @@
                   <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
-              </div><!-- End recent post item-->
+             
+              </div><!-- End recent post item--> --}}
 
             </div><!--/Recent Posts Widget -->
 

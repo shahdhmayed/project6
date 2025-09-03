@@ -237,10 +237,12 @@
                 </div>
 
                 <div class="post-list">
+                @foreach ($posts as $post)
                   <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span> <span>Jul 5th '22</span></div>
-                  <h2 class="mb-2"><a href="blog-details.html">5 Great Startup Tips for Female Founders</a></h2>
-                  <span class="author mb-3 d-block">Jenny Wilson</span>
+                  <h2 class="mb-2"><a href="{{route('posts.show',$post->postid)}}">{{ $post->title}}</a></h2>
+                  <span>{{ Str::limit($post->content,150)}}</span>
                 </div>
+                @endforeach
               </div>
               <div class="col-lg-8">
                 <div class="post-list">
