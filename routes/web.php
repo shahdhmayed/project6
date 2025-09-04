@@ -46,7 +46,7 @@ Route::post('/posts/{postid}/comment', [PostCommentController::class, 'store'])-
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-// الصفحات الثابتة اللي لسه مش محتاجة controllers
+
 Route::view('/about', 'about');
 Route::view('/starter-page', 'starter-page');
 Route::view('/category', 'category');

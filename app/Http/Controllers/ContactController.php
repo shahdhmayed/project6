@@ -13,7 +13,6 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    // استلام البيانات وتخزينها
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -23,14 +22,7 @@ class ContactController extends Controller
             'subject' => ['required','string','min:10'],
         ]);
 
-        // Contact::create([
-        //     'name'    => $request->name,
-        //     'email'   => $request->email,
-        //     'subject' => $request->subject,
-        //     'message' => $request->message,
-        // ]);
-
-        // تأكدي إن موديل Contact فيه fillable للأعمدة دي
+    
         Contact::create($data);
 
         return redirect()->back()->with('success', 'Done');
